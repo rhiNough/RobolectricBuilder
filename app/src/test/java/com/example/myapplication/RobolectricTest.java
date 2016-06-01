@@ -18,8 +18,17 @@ import static org.robolectric.Shadows.shadowOf;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 21)
 public class RobolectricTest {
+
     @Test
     public void testFirst() {
+        Activity activity = Robolectric.setupActivity(MainActivity.class);
+
+        TextView results = (TextView) activity.findViewById(R.id.textView);
+        String resultsText = results.getText().toString();
+
+        // failing test gives much better feedback
+        // to show that all works correctly ;)
+        assertThat(resultsText, equalTo("Rock the world!"));
 
     }
     @Test

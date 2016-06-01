@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.example.myapplication"
-        minSdkVersion 7
-        targetSdkVersion 21
+        minSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -22,10 +22,10 @@ android {
 //apply from: 'build.workaround-missing-resource.gradle'
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
 
     testCompile 'junit:junit:4.12'
     testCompile "org.mockito:mockito-core:1.9.5"
     testCompile 'org.apache.maven:maven-ant-tasks:2.1.3'
-    testCompile "org.robolectric:robolectric:3.0-rc3"
+    testCompile "org.robolectric:robolectric:3.0"
 }
